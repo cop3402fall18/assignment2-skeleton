@@ -29,7 +29,11 @@ while read inp out gt_out ; do
         echo "TEST $i FAILED"
         let failed=$failed+1
         
-        echo "   There is difference between $out and $gt_out"
+        echo "   There is difference between $out and $gt_out:"
+        echo "==================================================="
+        echo $_diff
+        echo "==================================================="
+        echo ""
     else
         # yay! test passed
         echo "TEST $i PASSED"
