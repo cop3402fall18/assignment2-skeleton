@@ -47,9 +47,9 @@ You are not required to handle command line argument interpretation since it is 
 
 In the presence of the test cases, an example usage could be given as:
 ```
-$ ./la.out test/io/inputs/inp_0.txt your_output_dir/lexeme_table_0.txt
+$ ./la.out test/io/public/inputs/inp_0.txt your_output_dir/lexeme_table_0.txt
 ```
-After the execution of the above bash command, one file would be created in `your_output_dir` folder. This file should be the same as `test/io/ground_truth/gt_out_0.txt`.
+After the execution of the above bash command, one file would be created in `your_output_dir` folder. This file should be the same as `test/io/public/ground_truth/gt_out_0.txt`.
 
 # A Note on Output Format
 In this assignment, you are not required to print anything. The evaluation will be done based on the return value of `lexicalAnalyzer()` function. For your convenience while testing, the code that prints the return value as a list is included in the repository.
@@ -70,9 +70,9 @@ For further information about command line arguments, read the [Command Line Arg
 # Test & Grade
 Test cases with their ground truth outputs were prepared to help you test your solutions. Also, simple tester and grader scripts are included to allow you run your tests in automated manner.
 
-You could find the input files in [test/io/inputs/](test/io/inputs/) folder. The files that your solution should output are included in [test/io/ground_truth/](test/io/ground_truth/) folder.
+You could find the input files in the folders [test/io/public/inputs/](test/io/public/inputs/) and [test/io/private/inputs/](test/io/private/inputs/). The files that your solution should output are included in the folders [test/io/public/ground_truth/](test/io/public/ground_truth/) and [test/io/private/ground_truth/](test/io/private/ground_truth/).
 
-Targets for testing and grading does also exist in the [Makefile](Makefile). The target `run_la` allows you to run your lexical analyzer on all the given test cases and creates the printed outputs of lexical analyzer inside [test/io/your_outputs/](test/io/your_outputs/) folder. The target `grade` runs your lexical analyzer on all the given test cases, creates the printed outputs of your lexical analyzer and compares it with the ground truth outputs which are included in [test/io/ground_truth/](test/io/ground_truth/) folder.
+Targets for testing and grading does also exist in the [Makefile](Makefile). The target `run_la` allows you to run your lexical analyzer on all the given test cases and creates the printed outputs of lexical analyzer inside the folders [test/io/public/your_outputs/](test/io/public/your_outputs/) and [test/io/private/your_outputs/](test/io/private/your_outputs/). The target `grade` runs your lexical analyzer on all the given test cases, creates the printed outputs of your lexical analyzer and compares it with the ground truth outputs which are included in the folders  [test/io/public/ground_truth/](test/io/public/ground_truth/) and [test/io/private/ground_truth/](test/io/private/ground_truth/).
 
 Basically, what you should do to get printed outputs from your lexical analyzer as a result of feeding the test cases is:
 ```
